@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'git@github.com:Nihanicky/terra.git'
+                git branch: 'main', url: 'https://github.com/Nihanicky/terra.git'
             }
         }
 
