@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        AWS_ACCESS_KEY_ID     = credentials('aws-access-key-id')   // Jenkins credentials ID
-        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
+        AWS_ACCESS_KEY_ID     = credentials('aws-creds')   // Jenkins credentials ID
+        AWS_SECRET_ACCESS_KEY = credentials('aws-creds')
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: ''
+                git branch: 'main', url: 'git@github.com:Nihanicky/terra.git'
             }
         }
 
